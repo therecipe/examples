@@ -1,0 +1,20 @@
+sudo: required
+language: go
+go:
+- 1.10.1
+
+services:
+- docker
+
+install:
+- docker pull therecipe/qt:ubports_arm_vivid
+- docker pull therecipe/qt:ubports_64_vivid
+- docker pull therecipe/qt:ubports_arm_xenial
+- docker pull therecipe/qt:ubports_64_xenial
+- go get -u -v github.com/therecipe/qt/cmd/...
+
+script:
+- $GOPATH/bin/qtdeploy -docker build ubports_arm_vivid
+- $GOPATH/bin/qtdeploy -docker build ubports_64_vivid
+- $GOPATH/bin/qtdeploy -docker build ubports_arm_xenial
+- $GOPATH/bin/qtdeploy -docker build ubports_64_xenial

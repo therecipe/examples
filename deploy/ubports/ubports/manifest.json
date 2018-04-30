@@ -1,0 +1,15 @@
+{
+    "name": "ubports",
+    "description": "description",
+    "architecture": "amd64",
+    "title": "DeployExample",
+    "hooks": {
+        "ubports": {
+            "apparmor": "ubports.apparmor",
+            "desktop":  "ubports.desktop"
+        }
+    },
+    "version": "1.0",
+    "maintainer": "maintainer_name <maintainer_email>",
+    "framework" : "ubuntu-sdk-15.04.6"
+}

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+X-Nemo-Application-Type=generic
+Comment=Put your comment here
+Name=DeployExample
+Icon=harbour-sailfish
+Exec=harbour-sailfish

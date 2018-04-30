@@ -1,0 +1,20 @@
+sudo: required
+language: go
+go:
+- 1.10.1
+
+services:
+- docker
+
+install:
+- docker pull therecipe/qt:windows_32_shared
+- docker pull therecipe/qt:windows_32_static
+- docker pull therecipe/qt:windows_64_shared
+- docker pull therecipe/qt:windows_64_static
+- go get -u -v github.com/therecipe/qt/cmd/...
+
+script:
+- $GOPATH/bin/qtdeploy -docker build windows_32_shared
+- $GOPATH/bin/qtdeploy -docker build windows_32_static
+- $GOPATH/bin/qtdeploy -docker build windows_64_shared
+- $GOPATH/bin/qtdeploy -docker build windows_64_static
