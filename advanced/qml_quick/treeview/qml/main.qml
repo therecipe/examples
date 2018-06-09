@@ -1,3 +1,4 @@
+import QtQml.Models 2.2			//needed for js
 import QtQuick 2.10				//Item
 import QtQuick.Controls 1.4		//TreeView
 import QtQuick.Controls 2.3		//Button

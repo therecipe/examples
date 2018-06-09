@@ -1,3 +1,4 @@
+import QtQuick 2.0				//needed for js
 import QtQuick.Controls 2.3		//Button
 import QtQuick.Layouts 1.3		//ColumnLayout
 import CustomQmlTypes 1.0		//ItemTemplate
