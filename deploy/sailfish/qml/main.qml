@@ -16,7 +16,7 @@ ApplicationWindow {
 				Layout.alignment: Qt.AlignCenter
 
 				onLinkActivated: Qt.openUrlExternally(link)
-				text: "<a href=\"https://github.com/therecipe/qt/wiki/Setting-the-Application-Icon#setting-the-icon-on-sailfishos\">Docs</a>"
+				text: "<a href=\"https://github.com/therecipe/qt/wiki/Setting-the-Application-Icon#sailfishos\">Docs</a>"
 			}
 
 			Label {

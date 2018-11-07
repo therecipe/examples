@@ -22,7 +22,7 @@ func main() {
 	window.SetCentralWidget(widget)
 
 	for _, d := range [][]string{
-		{"https://github.com/therecipe/qt/wiki/Setting-the-Application-Icon#setting-the-icon-on-linux", "Docs"},
+		{"https://github.com/therecipe/qt/wiki/Setting-the-Application-Icon#linux", "Docs"},
 		{"https://doc.qt.io/qt-5/linux-deployment.html", "Qt docs"},
 		{"https://www.iconfinder.com/icons/52510/application_icon", "Icon credits"},
 	} {

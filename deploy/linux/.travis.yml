@@ -1,7 +1,7 @@
 sudo: required
 language: go
 go:
-- 1.10.1
+- 1.11.1
 
 services:
 - docker
@@ -11,7 +11,7 @@ install:
 - docker pull therecipe/qt:rpi1
 - docker pull therecipe/qt:rpi2
 - docker pull therecipe/qt:rpi3
-- go get -u -v github.com/therecipe/qt/cmd/...
+- go get -v github.com/therecipe/qt/cmd/...
 
 script:
 - $GOPATH/bin/qtdeploy -docker build linux

@@ -9,7 +9,7 @@ Item {
 			Layout.alignment: Qt.AlignCenter
 
 			onLinkActivated: Qt.openUrlExternally(link)
-			text: "<a href=\"https://github.com/therecipe/qt/wiki/Setting-the-Application-Icon\">Docs</a>"
+			text: "<a href=\"https://github.com/therecipe/qt/wiki/Setting-the-Application-Icon#ubuntu-touch\">Docs</a>"
 		}
 
 		Label {

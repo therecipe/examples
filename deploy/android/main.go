@@ -22,7 +22,7 @@ func main() {
 	window.SetCentralWidget(widget)
 
 	for _, d := range [][]string{
-		{"https://github.com/therecipe/qt/wiki/Setting-the-Application-Icon#setting-the-icon-on-android", "Docs"},
+		{"https://github.com/therecipe/qt/wiki/Setting-the-Application-Icon#android", "Docs"},
 		{"https://doc.qt.io/qt-5/deployment-android.html", "Qt docs"},
 		{"https://developer.android.com/studio/publish/app-signing#signing-manually", "Signing your app"},
 		{"https://appicon.co", "Icon tool"},
