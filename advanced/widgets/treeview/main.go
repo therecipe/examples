@@ -204,10 +204,10 @@ func main() {
 	widget.SetLayout(widgets.NewQVBoxLayout())
 	window.SetCentralWidget(widget)
 
-	listview := widgets.NewQTreeView(nil)
+	treeview := widgets.NewQTreeView(nil)
 	model := NewCustomTreeModel(nil)
-	listview.SetModel(model)
-	widget.Layout().AddWidget(listview)
+	treeview.SetModel(model)
+	widget.Layout().AddWidget(treeview)
 
 	remove := widgets.NewQPushButton2("remove last item", nil)
 	remove.ConnectClicked(func(bool) {
