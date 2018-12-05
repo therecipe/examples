@@ -33,7 +33,7 @@ func main() {
 	view.SetResizeMode(quick.QQuickView__SizeRootObjectToView)
 	view.SetTitle("Hello QML/Quick Example")
 
-	// load the embeeded qml file
+	// load the embedded qml file
 	// created by either qtrcc or qtdeploy
 	view.SetSource(core.NewQUrl3("qrc:/qml/main.qml", 0))
 	// you can also load a local file like this instead:
