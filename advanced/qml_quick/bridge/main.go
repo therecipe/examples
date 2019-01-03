@@ -56,7 +56,8 @@ func (t *ItemTemplate) sendError(a error, b []error) {
 }
 
 func (t *ItemTemplate) sendVariantListMap(a *core.QVariant, b []*core.QVariant, c map[string]*core.QVariant) {
-	fmt.Println("sendVariantListMap:", a.ToBool(), b[0].ToDouble(false), b[1].ToString(), c)
+	var boolean bool
+	fmt.Println("sendVariantListMap:", a.ToBool(), b[0].ToDouble(&boolean), b[1].ToString(), c)
 }
 
 func (t *ItemTemplate) sendItemTemplate(a *ItemTemplate) {
