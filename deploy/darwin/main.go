@@ -23,7 +23,7 @@ func main() {
 
 	for _, d := range [][]string{
 		{"https://github.com/therecipe/qt/wiki/Setting-the-Application-Icon#macos", "Docs"},
-		{"https://doc.qt.io/qt-5/osx-deployment.html", "Qt docs"},
+		{"https://doc.qt.io/qt-5/macos-deployment.html", "Qt docs"},
 		{"https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Introduction/Introduction.html", "Apple docs"},
 		{"https://www.iconfinder.com/icons/52510/application_icon", "Icon credits"},
 	} {
