@@ -12,7 +12,13 @@ import (
 type CustomLabel struct {
 	widgets.QLabel
 
-	_ func(string) `signal:"updateTextFromGoroutine,auto(this.QLabel.setText)"` //TODO: support this.setText as well
+	_ func() `constructor:"init"`
+
+	_ func(string) `signal:"updateTextFromGoroutine"`
+}
+
+func (c *CustomLabel) init() {
+	c.ConnectUpdateTextFromGoroutine(c.SetText)
 }
 
 func main() {
