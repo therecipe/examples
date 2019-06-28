@@ -90,7 +90,7 @@ ItemTemplate {
 			text: "sendItemTemplate"
 			onClicked: {
 				text = "look into the console"
-				root.sendItemTemplate(root)
+				root.sendItemTemplate(root, [root, root])
 			}
 		}
 
@@ -100,7 +100,7 @@ ItemTemplate {
 			text: "sendItem"
 			onClicked: {
 				text = "look into the console"
-				root.sendItem(root)
+				root.sendItem(root, [root, root])
 			}
 		}
 

@@ -18,7 +18,7 @@ func main() {
 
 	widget := widgets.NewQWidget(nil, 0)
 	widget.SetLayout(widgets.NewQVBoxLayout())
-	widget.Layout().SetAlign(core.Qt__AlignCenter)
+	widget.Layout().QLayoutItem.SetAlignment(core.Qt__AlignCenter)
 	window.SetCentralWidget(widget)
 
 	for _, d := range [][]string{

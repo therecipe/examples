@@ -138,7 +138,7 @@ func (m *CustomTreeModel) parent(index *core.QModelIndex) *core.QModelIndex {
 
 func (m *CustomTreeModel) headerData(section int, orientation core.Qt__Orientation, role int) *core.QVariant {
 	if role == int(core.Qt__DisplayRole) && orientation == core.Qt__Horizontal {
-		return core.NewQVariant14(m.rootItem.data(section))
+		return core.NewQVariant1(m.rootItem.data(section))
 	}
 	return m.HeaderDataDefault(section, orientation, role)
 }
@@ -163,7 +163,7 @@ func (m *CustomTreeModel) data(index *core.QModelIndex, role int) *core.QVariant
 	}
 
 	item := NewTreeItemFromPointer(index.InternalPointer())
-	return core.NewQVariant14(item.data(index.Column()))
+	return core.NewQVariant1(item.data(index.Column()))
 }
 
 func (m *CustomTreeModel) remove() {

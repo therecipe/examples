@@ -60,9 +60,9 @@ func (m *CustomTableModel) data(index *core.QModelIndex, role int) *core.QVarian
 	item := m.modelData[index.Row()]
 	switch role {
 	case FirstName:
-		return core.NewQVariant14(item.firstName)
+		return core.NewQVariant1(item.firstName)
 	case LastName:
-		return core.NewQVariant14(item.lastName)
+		return core.NewQVariant1(item.lastName)
 	}
 	return core.NewQVariant()
 }

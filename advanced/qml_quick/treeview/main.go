@@ -173,9 +173,9 @@ func (m *CustomTreeModel) data(index *core.QModelIndex, role int) *core.QVariant
 	item := NewTreeItemFromPointer(index.InternalPointer())
 	switch role {
 	case FirstName:
-		return core.NewQVariant14(item._itemData[0])
+		return core.NewQVariant1(item._itemData[0])
 	case LastName:
-		return core.NewQVariant14(item._itemData[1])
+		return core.NewQVariant1(item._itemData[1])
 	}
 	return core.NewQVariant()
 }

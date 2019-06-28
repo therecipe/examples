@@ -25,8 +25,8 @@ type ItemTemplate struct {
 	_ func(string, []string)                                            `signal:"sendString,auto"`
 	_ func(error, []error)                                              `signal:"sendError,auto"`
 	_ func(*core.QVariant, []*core.QVariant, map[string]*core.QVariant) `signal:"sendVariantListMap,auto"`
-	_ func(*ItemTemplate)                                               `signal:"sendItemTemplate,auto"`
-	_ func(*quick.QQuickItem)                                           `signal:"sendItem,auto"`
+	_ func(*ItemTemplate, []*ItemTemplate)                              `signal:"sendItemTemplate,auto"`
+	_ func(*quick.QQuickItem, []*quick.QQuickItem)                      `signal:"sendItem,auto"`
 	_ func(*core.QObject, []*core.QObject)                              `signal:"sendObject,auto"`
 	//...
 }
@@ -60,12 +60,12 @@ func (t *ItemTemplate) sendVariantListMap(a *core.QVariant, b []*core.QVariant, 
 	fmt.Println("sendVariantListMap:", a.ToBool(), b[0].ToDouble(&boolean), b[1].ToString(), c)
 }
 
-func (t *ItemTemplate) sendItemTemplate(a *ItemTemplate) {
-	fmt.Println("sendItemTemplate:", a.SomeString())
+func (t *ItemTemplate) sendItemTemplate(a *ItemTemplate, b []*ItemTemplate) {
+	fmt.Println("sendItemTemplate:", a.SomeString(), b[0].SomeString(), b[1].SomeString())
 }
 
-func (t *ItemTemplate) sendItem(a *quick.QQuickItem) {
-	fmt.Println("sendItem:", NewItemTemplateFromPointer(a.Pointer()).SomeString())
+func (t *ItemTemplate) sendItem(a *quick.QQuickItem, b []*quick.QQuickItem) {
+	fmt.Println("sendItem:", NewItemTemplateFromPointer(a.Pointer()).SomeString(), NewItemTemplateFromPointer(b[0].Pointer()).SomeString(), NewItemTemplateFromPointer(b[1].Pointer()).SomeString())
 }
 
 func (t *ItemTemplate) sendObject(a *core.QObject, b []*core.QObject) {

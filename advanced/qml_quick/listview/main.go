@@ -45,7 +45,7 @@ func (m *CustomListModel) data(index *core.QModelIndex, role int) *core.QVariant
 	}
 
 	item := m.modelData[index.Row()]
-	return core.NewQVariant14(fmt.Sprintf("%v %v", item.firstName, item.lastName))
+	return core.NewQVariant1(fmt.Sprintf("%v %v", item.firstName, item.lastName))
 }
 
 func (m *CustomListModel) remove() {
