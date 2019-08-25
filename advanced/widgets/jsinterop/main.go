@@ -31,7 +31,7 @@ func main() {
 	button := js.Global.Call("eval", `
 	   "use strict";
 
-	   var button = widgets.NewQPushButton2("start!", 0);
+	   var button = widgets.NewQPushButton2("start!");
 	   button.ConnectClicked(function(bool) { alert("clicked the first button: " + button.Text()); goFunc("fromJS1"); });
 	   button.Pointer();
 	   			`)
@@ -40,7 +40,7 @@ func main() {
 	button2 := js.Global.Call("eval", `
 	   "use strict";
 
-	   var button = widgets.NewQPushButton2("start2!", 0);
+	   var button = widgets.NewQPushButton2("start2!");
 	   button.ConnectClicked(function(bool) { alert("clicked the first button: " + button.Text()); goFunc("fromJS2"); });
 	   button.Pointer();
 	   			`)
