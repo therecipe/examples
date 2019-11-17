@@ -1,4 +1,4 @@
-//port of: https://github.com/therecipe/qt/blob/master/internal/examples/widgets/line_edits/line_edits.go
+//port of: https://github.com/therecipe/examples/blob/master/basic/widgets/main.go
 
 package main
 
@@ -12,7 +12,7 @@ import (
 func main() {
 	widgets.NewQApplication(len(os.Args), os.Args)
 
-	file := core.NewQFile2(":/qml/main.js")
+	file := core.NewQFile2(":/qml/basic.js")
 	if file.Open(core.QIODevice__ReadOnly) {
 		evalJS(file.ReadAll().ConstData())
 		file.Close()

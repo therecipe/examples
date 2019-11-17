@@ -1,9 +1,10 @@
 //port of: https://github.com/therecipe/qt/blob/master/internal/examples/widgets/line_edits/line_edits.go
 
 //import github.com/therecipe/qt/core
+//import github.com/therecipe/qt/gui
 //import github.com/therecipe/qt/widgets
 
-"use strict";
+(function(){
 
 //widgets.NewQApplication(); //TODO
 
@@ -132,14 +133,14 @@ var validatorChanged = function(validatorLineEdit, index) {
 
 		case 1: {
 			validatorLineEdit.SetValidator(
-				widgets.NewQIntValidator(validatorLineEdit)
+				gui.NewQIntValidator(validatorLineEdit)
 			);
 			break;
 		}
 
 		case 2: {
 			validatorLineEdit.SetValidator(
-				widgets.NewQDoubleValidator2(-999.0, 999.0, 2, validatorLineEdit)
+				gui.NewQDoubleValidator2(-999.0, 999.0, 2, validatorLineEdit)
 			);
 			break;
 		}
@@ -208,3 +209,4 @@ var accessChanged = function(accessLineEdit, index) {
 };
 
 //widgets.QApplication_Exec() //TODO
+})();
