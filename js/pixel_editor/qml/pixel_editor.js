@@ -30,7 +30,7 @@ for (x = 0; x < img.Width(); x++) {
 
 var item = widgets.NewQGraphicsPixmapItem2(gui.QPixmap_FromImage(img, 0));
 
-var color = gui.NewQColor3(255, 255, 255, 255); //TODO: the QColor object is garbage collected 
+var color = gui.NewQColor3(255, 255, 255, 255);
 var drawPixel = function(x, y) {
 	x = Math.trunc(x);
 	y = Math.trunc(y);
